@@ -30,8 +30,7 @@ echo "y"
 sleep 5
 cd ~
 curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php &&
-sleep 2
-&&
+sleep 2 &&
 HASH=`curl -sS https://composer.github.io/installer.sig` &&
 sleep 2
 echo $HASH && 
@@ -41,8 +40,7 @@ sleep 5 &&
 sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer &&
 sleep 5 &&
 echo -ne $'\e[1;91m[\e[0m\e[1;77m+\e[0m\e[1;91m]\e[1;32m'COMPOSER v2 INSTALLED [X]'\033[0m' 
-
-sudo apt -y update && sudo apt -y
+sudo apt -y update &&
 sudo apt -y install software-properties-common &&
 sleep 1 &&
 sudo add-apt-repository ppa:ondrej/php -yy &&
@@ -52,6 +50,7 @@ clear &&
 echo -ne $'\e[1;91m[\e[0m\e[1;77m+\e[0m\e[1;91m]\e[1;32m'Checking current status, and continuing.'\033[0m' 
 sleep 5
 sudo apt -y install php &&
+sleep 3 
 echo -e $'\e[1;91m[\e[0m\e[1;77m+\e[0m\e[1;91m]\e[1;32m'Your current PHP Version is being checked'\033[0m' 
 echo -e $'\e[1;91m[\e[0m\e[1;77m+\e[0m\e[1;91m]\e[1;32m'Installing'\033[0m' 
 php -v &&
